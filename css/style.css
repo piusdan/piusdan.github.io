@@ -51,7 +51,7 @@ label{
     padding: 2em 2.5em;
 }
 .banner {
-    background: url(https://d2g4xl4jlturhd.cloudfront.net/images/banner.jpg) no-repeat 0px 0px;
+    background: url(../images/banner.jpg) no-repeat 0px 0px;
     background: #0086fe;
     background-size: cover;
     -webkit-background-size: cover;
@@ -402,7 +402,7 @@ li.dropdown.act a.w3_icons_act {
 	color:#fff!important;
 }
 .about-left-w3ls {
-    background: url(https://d2g4xl4jlturhd.cloudfront.net/images/connect-min.jpg)no-repeat 0px 0px;
+    background: url(../images/connect-min.jpg)no-repeat 0px 0px;
     background-size: cover;
     padding: 0;
     min-height: 794px;
@@ -740,7 +740,7 @@ h3.w3_head.w3_head1 span {
     color: #fff!important;
 }
 .sevices-w3layouts{
-	background:url("https://d2g4xl4jlturhd.cloudfront.net/images/s2.jpg") no-repeat 0px 0px;
+	background:url("../images/s2.jpg") no-repeat 0px 0px;
 	background-size:cover;
 }
 .sevices-w3layouts p.w-text {
@@ -851,7 +851,7 @@ section.mid-w3layouts a:hover {
 /*-- mid --*/ 
 /*-- skills --*/ 
 .skills-agileinfo {
-    background: url(https://d2g4xl4jlturhd.cloudfront.net/images/skills.jpg)no-repeat 0px 0px;
+    background: url(../images/skills.jpg)no-repeat 0px 0px;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -1113,7 +1113,7 @@ a.agilebtn {
     position:absolute;
     right:0;
     top:0;
-    background:transparent url(https://d2g4xl4jlturhd.cloudfront.net/images/close.png) scroll no-repeat center;
+    background:transparent url(../images/close.png) scroll no-repeat center;
     cursor:pointer;
     z-index:9993;
     text-indent:-999em;
@@ -1137,12 +1137,12 @@ a.agilebtn {
 #cm-wrap #cm-prev
 {
     left:0;
-    background:transparent url(https://d2g4xl4jlturhd.cloudfront.net/images/prev.png) scroll no-repeat 0 center;
+    background:transparent url(../images/prev.png) scroll no-repeat 0 center;
 }
 #cm-wrap #cm-next
 {
     right:0;
-    background:transparent url(https://d2g4xl4jlturhd.cloudfront.net/images/next.png) scroll no-repeat 100% center;
+    background:transparent url(../images/next.png) scroll no-repeat 100% center;
 }
 #cm-wrap #cm-prev:hover,
 #cm-wrap #cm-next:hover,
@@ -1514,7 +1514,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 ul.social-slide li i{
 	width:70px;
 	height:74px;
-	background:url(https://d2g4xl4jlturhd.cloudfront.net/images/img-resources.png)no-repeat;
+	background:url(../images/img-resources.png)no-repeat;
 	display: inline-block;
 	margin:0px 15px;
 }
@@ -1561,14 +1561,14 @@ ul.social-slide li i.mac{
     /* margin: 0 0px; */
 }
 a.callbacks_nav.callbacks1_nav.prev {
-    background: transparent url(https://d2g4xl4jlturhd.cloudfront.net/images/arrr1.png) no-repeat 0px 2px;
+    background: transparent url(../images/arrr1.png) no-repeat 0px 2px;
     left: 70%;
     height: 20px;
     width: 32px;
     /* top: 53%; */
 }
 .callbacks_nav.next {
-    background: transparent url(https://d2g4xl4jlturhd.cloudfront.net/images/arrr2.png) no-repeat 0px 2px;
+    background: transparent url(../images/arrr2.png) no-repeat 0px 2px;
     left: 80%;
     height: 20px;
     width: 32px;
@@ -1609,7 +1609,7 @@ a.callbacks_nav.callbacks1_nav.prev {
     height: 32px;
     border: none;
     text-indent: 100%;
-    background: url(https://d2g4xl4jlturhd.cloudfront.net/images/arr.png) no-repeat 0px 0px;
+    background: url(../images/arr.png) no-repeat 0px 0px;
 }
 #toTopHover {
     width: 32px;
@@ -1866,7 +1866,7 @@ a.callbacks_nav.callbacks1_nav.prev {
 	}
 	.about-left-w3ls {
 		min-height: 415px;
-		background: url(https://d2g4xl4jlturhd.cloudfront.net/images/connect-min.jpg)no-repeat 0px -212px;
+		background: url(../images/connect-min.jpg)no-repeat 0px -212px;
 		background-size: cover;
 		z-index: 1;
 	}
@@ -1957,7 +1957,7 @@ a.callbacks_nav.callbacks1_nav.prev {
 		right: 4%;
 	}
 	.about-left-w3ls {
-		background: url(https://d2g4xl4jlturhd.cloudfront.net/images/connect-min.jpg)no-repeat 0px -183px;
+		background: url(../images/connect-min.jpg)no-repeat 0px -183px;
 		background-size: cover;
 	}
 	.about-left-w3ls h5 {
@@ -2088,7 +2088,7 @@ a.callbacks_nav.callbacks1_nav.prev {
 	}
 	.about-left-w3ls {
 		min-height: 340px;
-		background: url(https://d2g4xl4jlturhd.cloudfront.net/images/connect-min.jpg)no-repeat 0px -159px;
+		background: url(../images/connect-min.jpg)no-repeat 0px -159px;
 		background-size: cover;
 	}
 	.gallery_wthree, .work, .services, .skills-agileinfo, .mid-w3layouts {
@@ -2286,7 +2286,7 @@ a.callbacks_nav.callbacks1_nav.prev {
 	}
 	.about-left-w3ls {
 		min-height: 270px;
-		background: url(https://d2g4xl4jlturhd.cloudfront.net/images/connect-min.jpg)no-repeat 0px -112px;
+		background: url(../images/connect-min.jpg)no-repeat 0px -112px;
 		background-size: cover;
 	}
 	.about-left-w3ls h5 {
@@ -2374,7 +2374,7 @@ a.callbacks_nav.callbacks1_nav.prev {
 	}
 	.about-left-w3ls {
 		min-height: 239px;
-		background: url(https://d2g4xl4jlturhd.cloudfront.net/images/connect-min.jpg)no-repeat 0px -88px;
+		background: url(../images/connect-min.jpg)no-repeat 0px -88px;
 		background-size: cover;
 	}
 	.grid-c.grid_w3l {
@@ -2441,7 +2441,7 @@ a.callbacks_nav.callbacks1_nav.prev {
 		letter-spacing: 9px;
 	}
 	.about-left-w3ls {
-		background: url(https://d2g4xl4jlturhd.cloudfront.net/images/connect-min.jpg)no-repeat 0px -77px;
+		background: url(../images/connect-min.jpg)no-repeat 0px -77px;
 		background-size: cover;
 	}
 	.mobile-menu {
