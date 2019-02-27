@@ -224,13 +224,15 @@
 	<div class="contact" id="contact">
 		<h3 class="w3_head w3_head1">Contact Me <span>Get in touch with me</span></h3>
 		<div class="col-md-6 col-md-offset-3 contact-agileits-w3layouts">
-			<form action="#" method="post">
-				<input type="text" name="Your Name" placeholder="Name" required="">
-				<input type="email" name="Your Email" placeholder="Email" required="">
-				<input type="text" name="Phone Number" placeholder="Number" required="">
-				<textarea name="Message" placeholder="Message" required=""></textarea>
-				<input type="submit" value="Submit">
-			</form>
+            {% from "_formhelpers.html" import render_field %}
+            <form method=post>
+                {{ form.csrf_token }}
+                {{ render_field(form.name, placeholder="Name") }}
+                {{ render_field(form.email, placeholder="someone@example.com") }}
+                {{ render_field(form.phone, placeholder="Your Phone Number") }}
+                {{ render_field(form.message, placeholder="Say something") }}
+                <input type="submit" value="Submit">
+            </form>
 		</div>
 		<div class="clearfix"></div>
 	</div>
