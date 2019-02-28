@@ -60,13 +60,13 @@ Deployment commands:
     cd playbooks/deploy
 
 
-    ansible-playbook service.yml -i hosts (-l [SERVER_GROUP]) --tags "deploy"
+    ansible-playbook playbook.yml -i hosts.ini (-l [SERVER_GROUP]) --tags "deploy"
     e.g
-    ansible-playbook service.yml -i hosts -l prod_app_servers --tags "deploy"
-    ansible-playbook service.yml -i hosts -l test_app_servers --tags "deploy"
+    ansible-playbook playbook.yml -i hosts.ini -l prod_app_servers --tags "deploy"
+    ansible-playbook playbook.yml -i hosts.ini -l test_app_servers --tags "deploy"
 
 If you need to setup the app on a new server, add the `setup` tag to the role. 
 
-       ansible-playbook service.yml -i hosts (-l [SERVER_GROUP]) --tags "setup,deploy"
+       ansible-playbook playbook.yml -i hosts.ini (-l [SERVER_GROUP]) --tags "setup,deploy"
 
 You might also need to request for one or more `group_vars` files, which contain sensitive information such as passwords. Once you receive it, copy them to the `playbooks/deploy/group_vars` folder.
