@@ -22,8 +22,8 @@ It's probably a good idea to create a virtual environment for this project
 
 Then, clone the repo, cd into it, and create a project virtual environment.
 
-    git clone git@bitbucket.org:loanbee/loanbee-analysis-service.git
-    cd loanbee-analysis-service
+    git git@github.com:Piusdan/Piusdan.github.io.git
+    cd Piusdan.github.io
     python3 -m venv venv
     source venv/bin/activate
 
