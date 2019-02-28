@@ -29,3 +29,4 @@
 - name: Enable virtual host
   file: src=/etc/nginx/sites-available/{{ flaskapp_app_name }} dest=/etc/nginx/sites-enabled/{{ flaskapp_app_name }} state=link
   tags: setup
+  notify: restart nginx

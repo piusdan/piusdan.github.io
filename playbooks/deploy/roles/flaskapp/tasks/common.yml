@@ -1,13 +1,11 @@
 ---
-  # Install common packages and do basic configuration stuff
 
 - name: Ensure packages required for the Flask application
   apt: name="{{ flaskapp_app_packages }}" state=present update_cache=yes
-  # with_items: '{{ flaskapp_app_packages }}'
   tags: setup
 
 - name: Install the latest pip version
-  pip: name=pip extra_args='-U'
+  pip: name=pip extra_args='-U' executable="pip{{ flaskapp_python_version }}"
   tags: setup
 
 - name: Ensure flask user group

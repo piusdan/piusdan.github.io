@@ -1,4 +1,5 @@
 server {
+    server_name "{{ flaskapp_nginx_server_name }}" "www.{{ flaskapp_nginx_server_name }}";
     listen {{ flaskapp_nginx_port }};
     
     access_log /var/log/nginx/{{ flaskapp_app_name }}.log;

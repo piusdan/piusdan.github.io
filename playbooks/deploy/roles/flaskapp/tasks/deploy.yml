@@ -22,11 +22,8 @@
     group={{ flaskapp_app_user }}
   tags: deploy
 
-- name: Install application dependencies into virtualenv
-  pip:
-    requirements={{ flaskapp_app_requirements }}
-    virtualenv={{ flaskapp_app_directory }}/venv
-    state=present
+- name: Install required packages
+  pip: requirements="{{ flaskapp_app_directory }}/requirements.txt" virtualenv="{{ flaskapp_app_directory }}/venv" virtualenv_python="python{{ flaskapp_python_version }}"
   tags: deploy
   
 - name: Ensure all service scripts

@@ -1,7 +1,12 @@
 ---
 - hosts: all 
   become: yes
+  pre_tasks:
+    - name: Install Python for Ansible
+      raw: test -e /usr/bin/python || (sudo apt -y update && sudo apt install -y python-minimal)
+      register: output
+      changed_when: False
+    - setup:
   roles:
   - { role: flaskapp}
-  # Uncomment below to include the git role
-  # - {role: git-setup, tags: 'git'}
+  - {role: git-setup, tags: 'git'}
