@@ -4,7 +4,7 @@ from flask import Flask
 from flask import render_template, flash, redirect, url_for
 from flask_mail import Mail, Message
 from flask_wtf import FlaskForm as Form
-from wtforms import StringField, validators
+from wtforms import TextAreaField, validators
 
 app = Flask(__name__)
 
