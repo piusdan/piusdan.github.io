@@ -61,9 +61,6 @@ For deployments to prod, make sure all changes are tested and working. Preferabl
 touch playbooks/deploy/hosts.ini
 ```
 
-
-
-
 * Run Deployment commands:
 
     cd playbooks/deploy
