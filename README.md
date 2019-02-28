@@ -55,7 +55,16 @@ Ansible is used for deployment, so you should install that first on your machine
 See the [installation instructions](http://docs.ansible.com/ansible/latest/intro_installation.html).
 For deployments to prod, make sure all changes are tested and working. Preferably, do a canary release first if possible.
 
-Deployment commands:
+* Create a hosts files and update your hosts variables
+
+```
+touch playbooks/deploy/hosts.ini
+```
+
+
+
+
+* Run Deployment commands:
 
     cd playbooks/deploy
 
