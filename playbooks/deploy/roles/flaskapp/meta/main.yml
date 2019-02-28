@@ -1,0 +1,23 @@
+---
+galaxy_info:
+  author: Sebastian Ruml
+  description: Provisioning and deploy Flask applications
+  license: MIT
+  min_ansible_version: 1.8
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+  categories:
+    - database
+    - database:postgresql
+    - development
+    - system
+    - web
+    - python
+    - flask
+
+dependencies: []

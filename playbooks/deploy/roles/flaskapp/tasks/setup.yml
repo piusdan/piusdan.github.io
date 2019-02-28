@@ -1,0 +1,15 @@
+---
+  # Main setup/provision task
+
+- include: common.yml
+
+- include: supervisor.yml
+
+- include: nginx.yml
+  when: flaskapp_use_custom_nginx_conf
+
+- include: postgresql.yml
+  when: flaskapp_use_postgresql
+
+- include: node.yml
+  when: flaskapp_app_requires_npm

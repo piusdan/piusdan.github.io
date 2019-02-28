@@ -1,0 +1,52 @@
+---
+  # Deploy the application
+
+- name: Checkout the latest source code
+  git: repo={{ flaskapp_app_repository }} dest={{ flaskapp_app_directory }}
+    version={{ flaskapp_app_version }} accept_hostkey=true
+    key_file={{ flaskapp_app_repository_key_file }} force=yes
+  when: flaskapp_app_repository is defined and flaskapp_app_repository
+  tags: deploy
+
+- name: Copy application config to remote
+  template: src=env.j2 dest={{ flaskapp_app_directory }}/.env mode=0755
+  tags: deploy
+
+- name: Ensure app bin directory
+  file: dest={{ flaskapp_app_directory }}/bin state=directory mode=0775 
+  tags: deploy
+
+- name: Ensure app log directory
+  file: dest={{ flaskapp_app_directory }}/logs state=directory mode=0775 
+    owner={{ flaskapp_app_user }}
+    group={{ flaskapp_app_user }}
+  tags: deploy
+
+- name: Install application dependencies into virtualenv
+  pip:
+    requirements={{ flaskapp_app_requirements }}
+    virtualenv={{ flaskapp_app_directory }}/venv
+    state=present
+  tags: deploy
+  
+- name: Ensure all service scripts
+  template: src={{ item }} dest={{ flaskapp_app_run_directory }} mode=0755
+  with_fileglob:
+    - "../templates/bin/*"
+  tags: deploy
+
+- name: Run migrations
+  command: "{{ flaskapp_migration_command }}"
+  args:
+    chdir: "{{ flaskapp_app_directory }}"
+  when: flaskapp_run_migrations
+  tags: deploy
+
+- name: Update supervisor config for app
+  template: src=supervisor.conf.j2 dest=/etc/supervisor/conf.d/{{ flaskapp_app_name }}.conf
+  notify: restart supervisor
+  tags: deploy
+  
+- name: Ensure all applications are restarted
+  supervisorctl: name="{{ flaskapp_app_supervisor_group }}:" state=restarted
+  tags: deploy
