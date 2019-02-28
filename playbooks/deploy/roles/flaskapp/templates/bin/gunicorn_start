@@ -1,0 +1,22 @@
+#!/bin/bash
+
+LOGLEVEL={{ flaskapp_app_loglevel }}
+NAME="{{ flaskapp_app_name }}"
+APPDIR="{{ flaskapp_app_directory }}"
+NUM_WORKERS=3
+HOST=127.0.0.1
+TIMEOUT=120
+PORT={{ flaskapp_port }}
+STANDARD_LOGFILE=/logs/gunicorn.log
+ERROR_LOGFILE=/logs/gunicorn.err
+
+echo "Starting $NAME"
+
+# Activate the virtual environment
+cd $APPDIR
+source venv/bin/activate
+
+exec venv/bin/gunicorn app:app -b $HOST:$PORT \
+    -w $NUM_WORKERS \
+    -t $TIMEOUT \
+    --log-level $LOGLEVEL

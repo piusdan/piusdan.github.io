@@ -1,0 +1,13 @@
+[program:{{ flaskapp_app_name }}]
+command={{ flaskapp_app_run_directory }}/gunicorn_start
+user={{ flaskapp_app_user }}
+startsecs=5
+startretries=3
+autostart=true
+autorestart=unexpected
+stopwaitsecs=5
+stdout_logfile={{ flaskapp_app_log_directory }}/{{ flaskapp_app_name }}.log
+stderr_logfile={{ flaskapp_app_log_directory }}/{{ flaskapp_app_name }}.error.log
+
+[group:{{ flaskapp_app_supervisor_group }}]
+programs={{ flaskapp_app_name }}

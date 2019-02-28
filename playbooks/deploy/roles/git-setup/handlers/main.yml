@@ -1,0 +1,8 @@
+- name: start ssh 
+  service: name=ssh state=started enabled=yes
+
+- name: stop ssh 
+  service: name=ssh state=stopped enabled=yes
+
+- name: restart ssh
+  service: name=ssh state=restarted enabled=yes

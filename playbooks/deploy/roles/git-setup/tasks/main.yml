@@ -1,0 +1,5 @@
+- name: Upload the private key used for Github cloning
+  copy: src=ssh.key.j2 dest=/home/engineering/.ssh/id_rsa
+
+- name: Correct SSH deploy key permissions
+  file: dest=/home/engineering/.ssh/id_rsa mode=0600
