@@ -1,3 +1,8 @@
+---
+
+- name: Ensure .ssh directory exists.
+  file: path=/home/engineering/.ssh state=directory mode=0700 owner={{ flaskapp_app_user}} group={{ flaskapp_app_user}}
+
 - name: Upload the private key used for Github cloning
   copy: src=ssh.key.j2 dest=/home/engineering/.ssh/id_rsa
 

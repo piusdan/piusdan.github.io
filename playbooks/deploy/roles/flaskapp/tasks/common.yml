@@ -2,16 +2,20 @@
   # Install common packages and do basic configuration stuff
 
 - name: Ensure packages required for the Flask application
-  apt: pkg={{ item }} state=present
-  with_items: '{{ flaskapp_app_packages }}'
+  apt: name="{{ flaskapp_app_packages }}" state=present update_cache=yes
+  # with_items: '{{ flaskapp_app_packages }}'
   tags: setup
 
 - name: Install the latest pip version
   pip: name=pip extra_args='-U'
   tags: setup
 
+- name: Ensure flask user group
+  group: name={{ flaskapp_app_user }} state=present
+  tags: setup
+
 - name: Ensure flask user
-  user: name={{ flaskapp_app_user }} group={{ flaskapp_app_user }} createhome=yes
+  user: name={{ flaskapp_app_user }} group={{ flaskapp_app_user }}
   tags: setup
 
 - name: Ensure app directory
