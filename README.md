@@ -4,20 +4,9 @@ Flask App powered personal website
 
 Installation
 ----
-The main system dependencies are Python, Postgresql, and their respective development packages.
+The main system dependencies are Python its development packages.
 
-#### 1. System dependencies:
-On Ubuntu or Debian, first install:
-
-    sudo apt-get install postgresql python-dev libpq-dev
-
-Red Hat, Fedora, and other derivatives:
-
-    yum install postgresql-devel postgresql-libs libpqxx-devel
-
-Here's a [brief article](http://initd.org/psycopg/articles/2011/06/05/psycopg-windows-mingw/) on getting these dependencies running on Windows (exact instructions would be welcome).
-
-#### 2. Python virtual environment and dependencies
+#### 1. Python virtual environment and dependencies
 It's probably a good idea to create a virtual environment for this project
 
 Then, clone the repo, cd into it, and create a project virtual environment.
